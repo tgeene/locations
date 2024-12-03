@@ -1,0 +1,22 @@
+{
+    "name": "tgeene/locations",
+    "description": "",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Trevor Geene",
+        "email": "trevor.geene@gmail.com"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "Locations\\": "src/classes/"
+      },
+      "files": [    ]
+    },
+    "require": {
+      "php": ">=8.1"
+    },
+    "require-dev": {  }
+  }
