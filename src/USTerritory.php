@@ -51,9 +51,47 @@ enum USTerritory implements DetailsInterface
 			USTerritory::PW => 'PALAU',
 			USTerritory::PR => 'PUERTO RICO',
 			USTerritory::VI => 'VIRGIN ISLANDS',
-			USTerritory::AE => 'ARMED FORCES AFRICA \ CANADA \ EUROPE \ MIDDLE EAST',
+			USTerritory::AE => 'ARMED FORCES AFRICA / CANADA / EUROPE / MIDDLE EAST',
 			USTerritory::AA => 'ARMED FORCES AMERICA (EXCEPT CANADA)',
 			USTerritory::AP => 'ARMED FORCES PACIFIC',
+		};
+	}
+
+	public static function lookupAbbreviation(string $value): self
+	{
+		return match($value)
+		{
+			'AS' => USTerritory::AS,
+			'DC' => USTerritory::DC,
+			'FM' => USTerritory::FM,
+			'GU' => USTerritory::GU,
+			'MH' => USTerritory::MH,
+			'MP' => USTerritory::MP,
+			'PW' => USTerritory::PW,
+			'PR' => USTerritory::PR,
+			'VI' => USTerritory::VI,
+			'AE' => USTerritory::AE,
+			'AA' => USTerritory::AA,
+			'AP' => USTerritory::AP,
+		};
+	}
+
+	public static function lookupFullName(string $value): self
+	{
+		return match($value)
+		{
+			'AMERICAN SAMOA' => USTerritory::AS,
+			'DISTRICT OF COLUMBIA' => USTerritory::DC,
+			'FEDERATED STATES OF MICRONESIA' => USTerritory::FM,
+			'GUAM GU' => USTerritory::GU,
+			'MARSHALL ISLANDS' => USTerritory::MH,
+			'NORTHERN MARIANA ISLANDS' => USTerritory::MP,
+			'PALAU' => USTerritory::PW,
+			'PUERTO RICO' => USTerritory::PR,
+			'VIRGIN ISLANDS' => USTerritory::VI,
+			'ARMED FORCES AFRICA / CANADA / EUROPE / MIDDLE EAST' => USTerritory::AE,
+			'ARMED FORCES AMERICA (EXCEPT CANADA)' => USTerritory::AA,
+			'ARMED FORCES PACIFIC' => USTerritory::AP,
 		};
 	}
 }
