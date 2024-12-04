@@ -6,6 +6,6 @@ namespace Locations;
 
 interface DetailsInterface
 {
-	public function getAbreviation(): string;
+	public function getAbbreviation(): string;
 	public function getFullName(): string;
 }

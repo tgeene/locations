@@ -57,7 +57,7 @@ enum USState implements DetailsInterface
 	case WI;
 	case WY;
 
-	public function getAbreviation(): string
+	public function getAbbreviation(): string
 	{
 		return match($this)
         {

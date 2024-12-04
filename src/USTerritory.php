@@ -19,7 +19,7 @@ enum USTerritory implements DetailsInterface
 	case AA;
 	case AP;
 
-	public function getAbreviation(): string
+	public function getAbbreviation(): string
 	{
 		return match($this)
         {
