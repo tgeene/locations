@@ -57,9 +57,9 @@ enum USTerritory implements DetailsInterface
 		};
 	}
 
-	public static function lookupAbbreviation(string $value): self
+	public static function lookupAbbreviation(string $value): ?self
 	{
-		return match($value)
+		return match(strtoupper($value))
 		{
 			'AS' => USTerritory::AS,
 			'DC' => USTerritory::DC,
@@ -73,25 +73,7 @@ enum USTerritory implements DetailsInterface
 			'AE' => USTerritory::AE,
 			'AA' => USTerritory::AA,
 			'AP' => USTerritory::AP,
-		};
-	}
-
-	public static function lookupFullName(string $value): self
-	{
-		return match($value)
-		{
-			'American Samoa' => USTerritory::AS,
-			'District of Columbia' => USTerritory::DC,
-			'Federated States of Micronesia' => USTerritory::FM,
-			'Guam' => USTerritory::GU,
-			'Marshall Islands' => USTerritory::MH,
-			'Northern Mariana Islands' => USTerritory::MP,
-			'Palau' => USTerritory::PW,
-			'Puerto Rico' => USTerritory::PR,
-			'Virgin Islands' => USTerritory::VI,
-			'Armed Forces - Africa / Canada / Europe / Middle East' => USTerritory::AE,
-			'Armed Forces - America (Except Canada)' => USTerritory::AA,
-			'Armed Forces - Pacific' => USTerritory::AP,
+			default => null,
 		};
 	}
 }

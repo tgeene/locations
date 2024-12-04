@@ -171,9 +171,9 @@ enum USState implements DetailsInterface
 		};
 	}
 
-	public static function lookupAbbreviation(string $value): self
+	public static function lookupAbbreviation(string $value): ?self
 	{
-		return match($value)
+		return match(strtoupper($value))
 		{
 			'AL' => USState::AL,
 			'AK' => USState::AK,
@@ -225,63 +225,7 @@ enum USState implements DetailsInterface
 			'WV' => USState::WV,
 			'WI' => USState::WI,
 			'WY' => USState::WY,
-		};
-	}
-
-	public static function lookupFullName(string $value): self
-	{
-		return match($value)
-		{
-			'Alabama' => USState::AL,
-			'Alaska' => USState::AK,
-			'Arizona' => USState::AZ,
-			'Arkansas' => USState::AR,
-			'California' => USState::CA,
-			'Colorado' => USState::CO,
-			'Connecticut' => USState::CT,
-			'Delaware' => USState::DE,
-			'Florida' => USState::FL,
-			'Georgia' => USState::GA,
-			'Hawaii' => USState::HI,
-			'Idaho' => USState::ID,
-			'Illinois' => USState::IL,
-			'Indiana' => USState::IN,
-			'Iowa' => USState::IA,
-			'Kansas' => USState::KS,
-			'Kentucky' => USState::KY,
-			'Louisiana' => USState::LA,
-			'Maine' => USState::ME,
-			'Maryland' => USState::MD,
-			'Massachusetts' => USState::MA,
-			'Michigan' => USState::MI,
-			'Minnesota' => USState::MN,
-			'Mississippi' => USState::MS,
-			'Missouri' => USState::MO,
-			'Montana' => USState::MT,
-			'Nebraska' => USState::NE,
-			'Nevada' => USState::NV,
-			'New Hampshire' => USState::NH,
-			'New Jersey' => USState::NJ,
-			'New Mexico' => USState::NM,
-			'New York' => USState::NY,
-			'North Carolina' => USState::NC,
-			'North Dakota' => USState::ND,
-			'Ohio' => USState::OH,
-			'Oklahoma' => USState::OK,
-			'Oregon' => USState::OR,
-			'Pennsylvania' => USState::PA,
-			'Rhode Island' => USState::RI,
-			'South Carolina' => USState::SC,
-			'South Dakota' => USState::SD,
-			'Tennessee' => USState::TN,
-			'Texas' => USState::TX,
-			'Utah' => USState::UT,
-			'Vermont' => USState::VT,
-			'Virginia' => USState::VA,
-			'Washington' => USState::WA,
-			'West Virginia' => USState::WV,
-			'Wisconsin' => USState::WI,
-			'Wyoming' => USState::WY,
+			default => null,
 		};
 	}
 }
