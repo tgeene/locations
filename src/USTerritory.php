@@ -42,18 +42,18 @@ enum USTerritory implements DetailsInterface
 	{
 		return match($this)
         {
-			USTerritory::AS => 'AMERICAN SAMOA',
-			USTerritory::DC => 'DISTRICT OF COLUMBIA',
-			USTerritory::FM => 'FEDERATED STATES OF MICRONESIA',
-			USTerritory::GU => 'GUAM GU',
-			USTerritory::MH => 'MARSHALL ISLANDS',
-			USTerritory::MP => 'NORTHERN MARIANA ISLANDS',
-			USTerritory::PW => 'PALAU',
-			USTerritory::PR => 'PUERTO RICO',
-			USTerritory::VI => 'VIRGIN ISLANDS',
-			USTerritory::AE => 'ARMED FORCES AFRICA / CANADA / EUROPE / MIDDLE EAST',
-			USTerritory::AA => 'ARMED FORCES AMERICA (EXCEPT CANADA)',
-			USTerritory::AP => 'ARMED FORCES PACIFIC',
+			USTerritory::AS => 'American Samoa',
+			USTerritory::DC => 'District of Columbia',
+			USTerritory::FM => 'Federated States of Micronesia',
+			USTerritory::GU => 'Guam',
+			USTerritory::MH => 'Marshall Islands',
+			USTerritory::MP => 'Northern Mariana Islands',
+			USTerritory::PW => 'Palau',
+			USTerritory::PR => 'Puerto Rico',
+			USTerritory::VI => 'Virgin Islands',
+			USTerritory::AE => 'Armed Forces - Africa / Canada / Europe / Middle East',
+			USTerritory::AA => 'Armed Forces - America (Except Canada)',
+			USTerritory::AP => 'Armed Forces - Pacific',
 		};
 	}
 
@@ -80,18 +80,18 @@ enum USTerritory implements DetailsInterface
 	{
 		return match($value)
 		{
-			'AMERICAN SAMOA' => USTerritory::AS,
-			'DISTRICT OF COLUMBIA' => USTerritory::DC,
-			'FEDERATED STATES OF MICRONESIA' => USTerritory::FM,
-			'GUAM GU' => USTerritory::GU,
-			'MARSHALL ISLANDS' => USTerritory::MH,
-			'NORTHERN MARIANA ISLANDS' => USTerritory::MP,
-			'PALAU' => USTerritory::PW,
-			'PUERTO RICO' => USTerritory::PR,
-			'VIRGIN ISLANDS' => USTerritory::VI,
-			'ARMED FORCES AFRICA / CANADA / EUROPE / MIDDLE EAST' => USTerritory::AE,
-			'ARMED FORCES AMERICA (EXCEPT CANADA)' => USTerritory::AA,
-			'ARMED FORCES PACIFIC' => USTerritory::AP,
+			'American Samoa' => USTerritory::AS,
+			'District of Columbia' => USTerritory::DC,
+			'Federated States of Micronesia' => USTerritory::FM,
+			'Guam' => USTerritory::GU,
+			'Marshall Islands' => USTerritory::MH,
+			'Northern Mariana Islands' => USTerritory::MP,
+			'Palau' => USTerritory::PW,
+			'Puerto Rico' => USTerritory::PR,
+			'Virgin Islands' => USTerritory::VI,
+			'Armed Forces - Africa / Canada / Europe / Middle East' => USTerritory::AE,
+			'Armed Forces - America (Except Canada)' => USTerritory::AA,
+			'Armed Forces - Pacific' => USTerritory::AP,
 		};
 	}
 }
